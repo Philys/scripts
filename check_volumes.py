@@ -1,16 +1,14 @@
 #!/usr/bin/env python
- 
- 
+
+
 import glob
 import os
- 
-  
-path = '/Users/jeanettemumford/Documents/Research/Talks/MumfordBrainStats/ds008/'
- 
-boldfiles = glob.glob('%s/sub0[0-9][0-9]/BOLD/task00[0-9]_run00[0-9]/bold.nii.gz'%(path))
- 
-for file in boldfiles:  
+
+
+path = '/Users/Phili/Documents/Abschlussarbeit_Seminar_Datenanalyse/Aufgabe_1/Datensatz/'
+
+boldfiles = glob.glob('%s/sub*/func/sub*_task-objectcategories_run*_bold.nii.gz' % (path))
+
+for file in boldfiles:
     print file
-    os.system("fslnvols %s"%(file))
- 
- 
+    os.system("fslnvols %s" % (file))
